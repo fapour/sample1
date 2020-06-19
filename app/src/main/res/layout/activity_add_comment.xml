@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCommentActivity"
+    android:padding="@dimen/activity_add_comment_padding">
+
+    <TextView
+        android:id="@+id/rate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/retry_tv_text_size"
+        android:text="@string/your_comment_about_restaurant" />
+
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rate_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/rating_layout_margin_bottom_top"
+        android:layout_marginBottom="@dimen/rating_layout_margin_bottom_top">
+
+        <com.example.foodino.customs.RatingSelector
+            android:id="@+id/rating_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height"
+        android:layout_below="@id/rating_layout"
+        android:background="?android:attr/listDivider"/>
+
+    <TextView
+        android:id="@+id/description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/description_tv_margin_bottom_top"
+        android:layout_marginBottom="@dimen/description_tv_margin_bottom_top"
+        android:textSize="@dimen/description_tv_text_size"
+        android:textStyle="bold"
+        android:text="@string/explain_your_comment"/>
+
+    <EditText
+        android:id="@+id/comment_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_tv"
+        android:background="@drawable/edit_text_shape"
+        android:padding="@dimen/comment_et_padding"
+        android:gravity="top"
+        android:textDirection="rtl"
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:ems="10"
+        android:lines="4"/>
+
+    <Button
+        android:id="@+id/post_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:textStyle="bold"
+        android:text="@string/post_comment" />
+
+</RelativeLayout>

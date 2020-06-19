@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.foodino.customs.GlobalTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/fragment_title_tv_padding_bottom_top"
+        android:paddingBottom="@dimen/fragment_title_tv_padding_bottom_top"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:textSize="@dimen/fragment_title_tv_text_size"
+        android:textColor="@android:color/background_dark"
+        android:text="@string/title_restaurant_information"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/fri_information_linear_layouts_padding_top_bottom"
+        android:paddingBottom="@dimen/fri_information_linear_layouts_padding_top_bottom">
+
+        <com.example.foodino.customs.GlobalTextView
+            style="@style/fragment_restaurant_information_subtitle_texts"
+            android:text="@string/address"/>
+
+        <com.example.foodino.customs.GlobalTextView
+            android:id="@+id/address_tv"
+            style="@style/fragment_restaurant_information_value_texts"
+            android:gravity="center"
+            android:paddingLeft="@dimen/address_tv_padding_left_right"
+            android:paddingRight="@dimen/address_tv_padding_left_right"
+            android:lineSpacingExtra="@dimen/address_tv_line_spacing_extra"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/fri_information_linear_layouts_padding_top_bottom"
+        android:paddingBottom="@dimen/fri_information_linear_layouts_padding_top_bottom">
+
+        <com.example.foodino.customs.GlobalTextView
+            style="@style/fragment_restaurant_information_subtitle_texts"
+            android:text="@string/phone"/>
+
+        <com.example.foodino.customs.GlobalTextView
+            android:id="@+id/phone_tv"
+            style="@style/fragment_restaurant_information_value_texts" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/fri_information_linear_layouts_padding_top_bottom"
+        android:paddingBottom="@dimen/fri_information_linear_layouts_padding_top_bottom">
+
+        <com.example.foodino.customs.GlobalTextView
+            style="@style/fragment_restaurant_information_subtitle_texts"
+            android:text="@string/website"/>
+
+        <com.example.foodino.customs.GlobalTextView
+            android:id="@+id/website_tv"
+            style="@style/fragment_restaurant_information_value_texts" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="?android:attr/listDivider"/>
+
+    </LinearLayout>
+
+</LinearLayout>

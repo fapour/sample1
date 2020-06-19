@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/app_bar_elevation">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/collapsing_tool_bar_height"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+                    android:id="@+id/restaurant_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/preloadimg"
+                    android:scaleType="fitXY" />
+
+                <com.example.foodino.customs.GlobalTextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/title_tv_margin_right_top"
+                    android:layout_marginRight="@dimen/title_tv_margin_right_top"
+                    android:textSize="@dimen/title_tv_text_size"
+                    android:textColor="@android:color/white"/>
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_tv"
+                    android:layout_alignRight="@id/title_tv"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="3"
+                    android:rating="@string/default_rating" />
+
+                <ImageView
+                    android:id="@+id/inf_img"
+                    android:layout_width="@dimen/inf_img_width_height"
+                    android:layout_height="@dimen/inf_img_width_height"
+                    android:layout_alignBottom="@id/title_tv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/inf_img_margin_left_top"
+                    android:layout_marginTop="@dimen/inf_img_margin_left_top"
+                    app:srcCompat="@drawable/inf" />
+
+                <TextView
+                    android:id="@+id/rating_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/rating"
+                    android:layout_toLeftOf="@id/rating"
+                    android:paddingRight="@dimen/rating_tv_padding_left_right"
+                    android:paddingLeft="@dimen/rating_tv_padding_left_right"
+                    android:background="@drawable/rate_shape"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="@string/default_rating" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:gravity="top"
+                android:layout_marginBottom="@dimen/tool_bar_margin_bottom"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleEnabled="false"
+                app:layout_collapseMode="pin">
+
+                <include layout="@layout/activity_location_toolbar_layout"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimaryGray"
+                android:layoutDirection="rtl"
+                app:tabMode="fixed"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/screen_progress_bar"
+        android:visibility="gone"
+        layout="@layout/layout_progress_bar"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/location_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#690C05</color>
+    <color name="colorAccent">#1AD5D5</color>
+
+    <color name="colorPrimaryGray">#EEEDED</color>
+    <color name="darkerGray">#8A000000</color>
+    <color name="gray">#A4888888</color>
+
+    <color name="layout_progress_bar_transparent_color">#9A000000</color>
+
+    <color name="restaurant_list_item_address_color">#868383</color>
+    <color name="restaurant_list_item_title_color">#000000</color>
+
+    <color name="toast_background_color"></color>
+
+    <color name="rate_text_background_color">#5DA70D</color>
+
+    <!--rating_selector-->
+    <color name="happyColor">#4CAF50</color>
+    <color name="angryColor">#F44336</color>
+    <color name="weirdColor">#FFC107</color>
+    <color name="ratingTintColor">#585151</color>
+
+</resources>

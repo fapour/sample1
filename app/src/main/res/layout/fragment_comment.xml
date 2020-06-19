@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/rate_layout_padding_top">
+
+            <LinearLayout
+                android:id="@+id/rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layoutDirection="rtl">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="@string/default_rating"
+                    android:numStars="3"/>
+
+                <TextView
+                    android:id="@+id/ratingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rate_shape"
+                    android:layout_marginRight="@dimen/rating_text_margin_right"
+                    android:paddingRight="@dimen/rating_text_padding_right_left"
+                    android:paddingLeft="@dimen/rating_text_padding_right_left"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="@string/default_rating" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_below="@id/rating_layout"
+                android:layout_marginTop="@dimen/view_margin_top"
+                android:background="?android:attr/listDivider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_marginTop="@dimen/comment_rv_margin_top" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="bottom|left"
+        app:layout_anchor="@id/main_layout"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@drawable/comment_button_shape"
+        android:src="@drawable/comment"
+        app:fabSize="normal"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_behavior=".customs.FABOnScroll"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

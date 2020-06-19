@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/restaurant_list_item_card_layout_margin_left"
+    android:padding="@dimen/restaurant_list_item_card_layout_padding"
+    android:elevation="@dimen/restaurant_list_item_card_layout_elevation"
+    app:cardCornerRadius="@dimen/restaurant_list_item_card_layout_corner_radius">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/restaurant_list_item_relative_layout_margin_bottom">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/img_width"
+            android:layout_height="@dimen/img_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/food"/>
+
+        <com.example.foodino.customs.GlobalTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_alignRight="@id/img"
+            android:layout_margin="@dimen/tv_name_margin"
+            android:textStyle="bold"
+            android:textColor="@color/restaurant_list_item_title_color"
+            android:textSize="@dimen/tv_name_text_size" />
+
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="@dimen/img_location_width_height"
+            android:layout_height="@dimen/img_location_width_height"
+            android:layout_below="@id/tv_name"
+            android:layout_alignBottom="@id/tv_address"
+            android:layout_alignRight="@id/tv_name"
+            android:scaleType="fitCenter"
+            android:tint="@color/restaurant_list_item_address_color"
+            android:src="@drawable/location"/>
+
+        <com.example.foodino.customs.GlobalTextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_toLeftOf="@id/img_location"
+            android:gravity="center_vertical"
+            android:textColor="@color/restaurant_list_item_address_color"
+            android:textSize="@dimen/tv_address_text_size"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

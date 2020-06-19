@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">فودینو</string>
+
+    <!--splash_activity-->
+    <string name="internet_error">خطا در اتصال به اینترنت</string>
+    <string name="retry_internet">تلاش مجدد</string>
+
+    <string name="exit_message">برای خروج دوباره دکمه بازگشت را بزنید.</string>
+
+    <string name="connection_error_message">خطا در برقراری ارتباط با سرور</string>
+    <string name="retry_message">تلاش مجدد</string>
+
+    <!--add_comment_activity-->
+    <string name="fill_rate_message">لطفا امتیاز ثبت کنید</string>
+    <string name="fill_comment_message">لطفا متن وارد کنید</string>
+    <string name="successful_insert_message">نظر شما با موفقیت ثبت شد</string>
+    <string name="your_comment_about_restaurant">نظر شما در مورد رستوران ارگ سالاریه</string>
+    <string name="explain_your_comment">دیدگاه خود را شرح دهید</string>
+    <string name="post_comment">ثبت نظر</string>
+
+    <!--bottom_navigation_activity-->
+    <string name="title_home">خانه</string>
+    <string name="title_search">جستجو</string>
+    <string name="title_profile">پروفایل</string>
+
+    <!--menu_fragment-->
+    <string name="menu_fragment_message">در حال حاضر منوی هیچ رستورانی فعال نیست.</string>
+
+    <!--profile_fragment-->
+    <string name="follower">دنبال کنندگان</string>
+    <string name="following">دنبال شوندگان</string>
+    <string name="default_follower_following_count">0</string>
+    <string name="profile_name">حسن فرهی</string>
+    <string name="profile_information">اطلاعات حساب کاربری</string>
+    <string name="profile_favorite">علاقه مندی ها</string>
+    <string name="profile_comments">نظرات</string>
+    <string name="profile_logout">خروج از سیستم</string>
+
+    <!--restaurant_information_fragment-->
+    <string name="title_restaurant_information">اطلاعات رستوران</string>
+    <string name="address">آدرس</string>
+    <string name="phone">تلفن</string>
+    <string name="website">وبسایت</string>
+
+    <!--search_fragment-->
+    <string name="insert_restaurant_name">نام رستوران را وارد کنید...</string>
+
+    <!--rating_selector-->
+    <string name="good">خوب</string>
+    <string name="no_comment">نظری ندارم</string>
+    <string name="sad">بد</string>
+
+    <string-array name="tab_titles">
+        <item>نظرات</item>
+        <item>منو</item>
+    </string-array>
+
+    <string name="category">دسته بندی</string>
+    <string name="best">برترین ها</string>
+
+    <string name="default_rating">0</string>
+
+    <string-array name="food_categories">
+        <item>رستوران</item>
+        <item>فست فود</item>
+        <item>کافی شاپ</item>
+        <item>بستنی و آبمیوه</item>
+        <item>تهیه غذا</item>
+        <item>کبابی</item>
+    </string-array>
+
+    <string name="title_activity_simple_tab">SimpleTabActivity</string>
+    <string name="title_activity_base">baseActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
